@@ -59,8 +59,8 @@ static const Layout layouts[] = {
 /* commands */
 static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *upvol[] = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *downvol[] = { "pulsemixer", "--change-volume", "-5", NULL };
-static const char *upvol[]   = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
 
 static const Key keys[] = {
@@ -89,8 +89,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,                   tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,                  tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,                       quit,           {0} },
-	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          {.v = downvol } },
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn,          {.v = upvol } },
+	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,           spawn,          {.v = mutevol } },
 	TAGKEYS(                        XK_1,                       0)
 	TAGKEYS(                        XK_2,                       1)
