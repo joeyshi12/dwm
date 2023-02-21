@@ -62,6 +62,7 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *upvol[] = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *downvol[] = { "pulsemixer", "--change-volume", "-5", NULL };
 static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
+static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key                         function        argument */
@@ -92,6 +93,7 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn,          {.v = upvol } },
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          {.v = downvol } },
 	{ 0,                            XF86XK_AudioMute,           spawn,          {.v = mutevol } },
+	{ 0,                            XK_Print,                   spawn,          {.v = flameshotcmd } },
 	TAGKEYS(                        XK_1,                       0)
 	TAGKEYS(                        XK_2,                       1)
 	TAGKEYS(                        XK_3,                       2)
