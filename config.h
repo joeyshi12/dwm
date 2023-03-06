@@ -59,6 +59,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *passmenucmd[]  = { "passmenu", NULL };
 static const char *upvol[] = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *downvol[] = { "pulsemixer", "--change-volume", "-5", NULL };
 static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
@@ -70,6 +71,7 @@ static const Key keys[] = {
     /* modifier                     key                         function        argument */
     { MODKEY,                       XK_space,                   spawn,          {.v = roficmd } },
     { MODKEY,                       XK_Return,                  spawn,          {.v = termcmd } },
+    { MODKEY,                       XK_p,                       spawn,          {.v = passmenucmd } },
     { MODKEY,                       XK_b,                       togglebar,      {0} },
     { MODKEY,                       XK_j,                       focusstack,     {.i = +1 } },
     { MODKEY,                       XK_k,                       focusstack,     {.i = -1 } },
@@ -83,7 +85,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_t,                       setlayout,      {.v = &layouts[0]} },
     { MODKEY,                       XK_f,                       setlayout,      {.v = &layouts[1]} },
     { MODKEY,                       XK_m,                       setlayout,      {.v = &layouts[2]} },
-    { MODKEY,                       XK_l,                       setlayout,      {0} },
+    { MODKEY|ShiftMask,             XK_l,                       setlayout,      {0} },
     { MODKEY|ShiftMask,             XK_space,                   togglefloating, {0} },
     { MODKEY,                       XK_0,                       view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_0,                       tag,            {.ui = ~0 } },
