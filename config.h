@@ -67,7 +67,6 @@ static const Layout layouts[] = {
 /* commands */
 static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *passmenucmd[]  = { "passmenu", NULL };
 static const char *upvol[] = { "pulsemixer", "--change-volume", "+5", NULL };
 static const char *downvol[] = { "pulsemixer", "--change-volume", "-5", NULL };
 static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
@@ -79,7 +78,6 @@ static const Key keys[] = {
     /* modifier                     key                         function        argument */
     { MODKEY,                       XK_space,                   spawn,          {.v = roficmd } },
     { MODKEY,                       XK_Return,                  spawn,          {.v = termcmd } },
-    { MODKEY,                       XK_p,                       spawn,          {.v = passmenucmd } },
     { MODKEY,                       XK_b,                       togglebar,      {0} },
     STACKKEYS(MODKEY,                                           focus)
     STACKKEYS(MODKEY|ShiftMask,                                 push)
