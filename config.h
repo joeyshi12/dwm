@@ -7,15 +7,13 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=10" };
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_magenta[]     = "#cba6f7";
+static const char col_ocean[]       = "#0b2a47";
+static const char col_teal[]        = "#1f3d5c";
+static const char col_cloud[]       = "#d8e1e8";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_magenta, col_magenta  },
+	[SchemeNorm] = { col_cloud, col_ocean, col_ocean },
+	[SchemeSel]  = { col_cloud, col_teal,  col_teal  },
 };
 
 /* tagging */
@@ -61,9 +59,9 @@ static const Layout layouts[] = {
 static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", "-show-icons" };
 static const char *termcmd[] = { "kitty", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
-static const char *upvolcmd[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+",    NULL };
-static const char *downvolcmd[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-",    NULL };
-static const char *mutevolcmd[] = { "wpctl", "set-mute",   "@DEFAULT_AUDIO_SINK@", "toggle", NULL };
+static const char *upvolcmd[]   = { "volume", "up", NULL };
+static const char *downvolcmd[] = { "volume", "down", NULL };
+static const char *mutevolcmd[] = { "volume", "mute", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
