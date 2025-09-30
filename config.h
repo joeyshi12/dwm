@@ -14,7 +14,7 @@ static const char col_cloud[]       = "#d8e1e8";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_cloud, col_ocean, col_teal },
-	[SchemeSel]  = { col_cloud, col_ocean, col_sky  },
+	[SchemeSel]  = { col_cloud, col_teal,  col_sky  },
 };
 
 /* tagging */
