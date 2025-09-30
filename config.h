@@ -2,18 +2,19 @@
 #include "movestack.c"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const unsigned int borderpx  = 1;    /* border pixel of windows */
+static const unsigned int snap      = 32;   /* snap pixel */
+static const int showbar            = 1;    /* 0 means no bar */
+static const int topbar             = 1;    /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=10" };
 static const char col_ocean[]       = "#0b2a47";
+static const char col_sky[]         = "#3B5A83";
 static const char col_teal[]        = "#1f3d5c";
 static const char col_cloud[]       = "#d8e1e8";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_cloud, col_ocean, col_ocean },
-	[SchemeSel]  = { col_cloud, col_teal,  col_teal  },
+	[SchemeNorm] = { col_cloud, col_ocean, col_teal },
+	[SchemeSel]  = { col_cloud, col_ocean, col_sky  },
 };
 
 /* tagging */
@@ -59,9 +60,9 @@ static const Layout layouts[] = {
 static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", "-show-icons" };
 static const char *termcmd[] = { "kitty", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
-static const char *upvolcmd[]   = { "volume", "up", NULL };
-static const char *downvolcmd[] = { "volume", "down", NULL };
-static const char *mutevolcmd[] = { "volume", "mute", NULL };
+static const char *upvolcmd[]   = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "up", NULL };
+static const char *downvolcmd[] = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "down", NULL };
+static const char *mutevolcmd[] = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "mute", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
