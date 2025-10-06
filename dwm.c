@@ -730,7 +730,7 @@ drawbar(Monitor *m)
 				m == selmon && selmon->sel && selmon->sel->tags & 1 << i,
 				urg & 1 << i);
 		if (m->tagset[m->seltags] & 1 << i)
-		    drw_rect(drw, x, bh - underline_width, w, underline_width, 1, 0);
+		    drw_rect(drw, x, bh - underlinepx, w, underlinepx, 1, 0);
 		x += w;
 	}
 	w = TEXTW(m->ltsymbol);

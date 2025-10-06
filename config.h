@@ -3,7 +3,7 @@
 
 /* appearance */
 static const unsigned int borderpx = 2; /* border pixel of windows */
-static const unsigned int underline_width = 2; /* underline width on selected tag */
+static const unsigned int underlinepx = 2; /* underline pixel on selected tag */
 static const unsigned int snap = 32; /* snap pixel */
 static const int showbar = 1; /* 0 means no bar */
 static const int topbar = 1; /* 0 means bottom bar */
