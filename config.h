@@ -2,23 +2,24 @@
 #include "movestack.c"
 
 /* appearance */
-static const unsigned int borderpx  = 2;    /* border pixel of windows */
-static const unsigned int snap      = 32;   /* snap pixel */
-static const int showbar            = 1;    /* 0 means no bar */
-static const int topbar             = 1;    /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=12" };
-static const char col_ocean[]       = "#0b2a47";
-static const char col_sky[]         = "#3B5A83";
-static const char col_teal[]        = "#1f3d5c";
-static const char col_cloud[]       = "#d8e1e8";
-static const char *colors[][3]      = {
+static const unsigned int borderpx = 2; /* border pixel of windows */
+static const unsigned int underline_width = 2; /* underline width on selected tag */
+static const unsigned int snap = 32; /* snap pixel */
+static const int showbar = 1; /* 0 means no bar */
+static const int topbar = 1; /* 0 means bottom bar */
+static const char *fonts[] = { "JetBrains Mono:style=Bold:size=11", "SauceCodePro Nerd Font Mono:size=20" };
+static const char col_ocean[] = "#0b2a47";
+static const char col_sky[] = "#3B5A83";
+static const char col_teal[] = "#1f3d5c";
+static const char col_cloud[] = "#d8e1e8";
+static const char *colors[][3] = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_cloud, col_ocean, col_teal },
 	[SchemeSel]  = { col_cloud, col_teal,  col_sky  },
 };
 
 /* tagging */
-static const char *tags[] = { "  ", "  ", "  ", "  ", " 󰟵 " };
+static const char *tags[] = { "", "", "", "", "󰟵" };
 
 static const Rule rules[] = {
 	/* xprop(1):
