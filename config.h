@@ -2,11 +2,11 @@
 #include "movestack.c"
 
 /* appearance */
-static const unsigned int borderpx  = 1;    /* border pixel of windows */
+static const unsigned int borderpx  = 2;    /* border pixel of windows */
 static const unsigned int snap      = 32;   /* snap pixel */
 static const int showbar            = 1;    /* 0 means no bar */
 static const int topbar             = 1;    /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=10" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=12" };
 static const char col_ocean[]       = "#0b2a47";
 static const char col_sky[]         = "#3B5A83";
 static const char col_teal[]        = "#1f3d5c";
@@ -18,17 +18,21 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4" };
+static const char *tags[] = { "  ", "  ", "  ", "  ", " 󰟵 " };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Brave",      NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "krita",      NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "KeePassXC",  NULL,       NULL,       1 << 3,       0,           -1 },
+	/* class            instance  title  tags mask  isfloating  monitor */
+	{ "Brave-browser",  NULL,     NULL,  0,         0,          -1 },
+	{ "krita",          NULL,     NULL,  1 << 2,    0,          -1 },
+	{ "Inkscape",       NULL,     NULL,  1 << 2,    0,          -1 },
+	{ "obsidian",       NULL,     NULL,  1 << 2,    0,          -1 },
+	{ "vesktop",        NULL,     NULL,  1 << 3,    0,          -1 },
+	{ "discord-ptb",    NULL,     NULL,  1 << 3,    0,          -1 },
+	{ "KeePassXC",      NULL,     NULL,  1 << 4,    0,          -1 },
 };
 
 /* layout(s) */
@@ -99,6 +103,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_2,                                       1)
 	TAGKEYS(                        XK_3,                                       2)
 	TAGKEYS(                        XK_4,                                       3)
+	TAGKEYS(                        XK_5,                                       4)
 	{ MODKEY|ShiftMask,             XK_q,                       quit,           {0} },
 };
 
