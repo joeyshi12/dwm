@@ -730,7 +730,7 @@ drawbar(Monitor *m)
 				m == selmon && selmon->sel && selmon->sel->tags & 1 << i,
 				urg & 1 << i);
 		if (m->tagset[m->seltags] & 1 << i)
-		    drw_rect(drw, x, bh - underlinepx, w, underlinepx, 1, 0);
+			drw_rect(drw, x, bh - underlinepx, w, underlinepx, 1, 0);
 		x += w;
 	}
 	w = TEXTW(m->ltsymbol);
@@ -1565,7 +1565,7 @@ setup(void)
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
-	bh = drw->fonts->h + 2;
+	bh = drw->fonts->h + vbarpadding;
 	updategeom();
 	/* init atoms */
 	utf8string = XInternAtom(dpy, "UTF8_STRING", False);
