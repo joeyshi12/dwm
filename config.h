@@ -8,7 +8,7 @@ static const unsigned int vbarpadding = 8; /* vertical bar padding */
 static const unsigned int snap = 32; /* snap pixel */
 static const int showbar = 1; /* 0 means no bar */
 static const int topbar = 1; /* 0 means bottom bar */
-static const char *fonts[] = { "JetBrains Mono:style=Bold:size=11", "SauceCodePro Nerd Font Mono:size=20" };
+static const char *fonts[] = { "JetBrains Mono:style=Bold:size=11", "JetBrainsMono Nerd Font Mono:size=20" };
 static const char col_ocean[] = "#0b2a47";
 static const char col_sky[] = "#3B5A83";
 static const char col_teal[] = "#1f3d5c";
@@ -64,7 +64,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "/home/joey/.config/rofi/config.rasi", "-show-icons" };
-static const char *termcmd[] = { "kitty", NULL };
+static const char *termcmd[] = { "alacritty", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 static const char *upvolcmd[]   = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "up", NULL };
 static const char *downvolcmd[] = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "down", NULL };
