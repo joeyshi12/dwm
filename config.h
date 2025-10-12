@@ -17,8 +17,9 @@ static const char col_urgent[]   = "#f4d06f";
 
 static const char *colors[][3] = {
 	/*                     fg            bg           border   */
-	[SchemeNorm]       = { col_fgdim,    col_bg,      col_bgalt   },
+	[SchemeNorm]       = { col_fg,       col_bg,      col_bgalt   },
 	[SchemeSel]        = { col_fg,       col_bg,      col_accent  },
+	[SchemeTagNorm]    = { col_fgdim,    col_bg,      col_bg      },
 	[SchemeTagSel]     = { col_fg,       col_bgalt,   col_bgalt   },
 	[SchemeTagUrgent]  = { col_urgent,   col_bgalt,   col_bgalt   },
 };

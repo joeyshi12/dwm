@@ -57,7 +57,8 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel, SchemeTagSel, SchemeTagUrgent }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeTagNorm,
+       SchemeTagSel, SchemeTagUrgent }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -727,7 +728,7 @@ drawbar(Monitor *m)
 		else if (m->tagset[m->seltags] & 1 << i || occ & 1 << i)
 			drw_setscheme(drw, scheme[SchemeTagSel]);
 		else
-			drw_setscheme(drw, scheme[SchemeNorm]);
+			drw_setscheme(drw, scheme[SchemeTagNorm]);
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], 0);
 		if (m->tagset[m->seltags] & 1 << i)
 			drw_rect(drw, x, bh - 2, w, 2, 1, 0);
