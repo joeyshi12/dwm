@@ -9,14 +9,22 @@ static const unsigned int snap = 32; /* snap pixel */
 static const int showbar = 1; /* 0 means no bar */
 static const int topbar = 1; /* 0 means bottom bar */
 static const char *fonts[] = { "JetBrains Mono:style=Bold:size=11", "JetBrainsMono Nerd Font Mono:size=20" };
-static const char col_ocean[] = "#0b2a47";
-static const char col_sky[] = "#3B5A83";
-static const char col_teal[] = "#1f3d5c";
-static const char col_cloud[] = "#d8e1e8";
+static const char col_bg[]       = "#0f1825";
+static const char col_bgalt[]    = "#253447";
+static const char col_accent[]   = "#4a9eb8";
+static const char col_fg[]       = "#e8f4f8";
+static const char col_fgdim[]    = "#6b8494";
+static const char col_urgent[]   = "#f4d06f";
+
 static const char *colors[][3] = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_cloud, col_ocean, col_teal },
-	[SchemeSel]  = { col_cloud, col_teal,  col_sky  },
+	/*                     fg            bg           border   */
+	[SchemeNorm]       = { col_fgdim,    col_bg,      col_bgalt   },
+	[SchemeSel]        = { col_fg,       col_bg,      col_accent  },
+	[SchemeTag]	       = { col_fgdim,    col_bg,      col_bg      },
+	[SchemeTagSel]     = { col_fg,       col_accent,  col_accent  },
+	[SchemeTagOcc]     = { col_fg,       col_bgalt,   col_bgalt   },
+	[SchemeTagUrgent]  = { col_bg,       col_urgent,  col_urgent  },
+	[SchemeTagUrgent]  = { col_urgent,   col_bgalt,   col_bgalt   },
 };
 
 /* tagging */
