@@ -3,7 +3,6 @@
 
 /* appearance */
 static const unsigned int borderpx = 2; /* border pixel of windows */
-static const unsigned int underlinepx = 2; /* underline pixel on selected tag */
 static const unsigned int vbarpadding = 8; /* vertical bar padding */
 static const unsigned int snap = 32; /* snap pixel */
 static const int showbar = 1; /* 0 means no bar */
@@ -20,10 +19,7 @@ static const char *colors[][3] = {
 	/*                     fg            bg           border   */
 	[SchemeNorm]       = { col_fgdim,    col_bg,      col_bgalt   },
 	[SchemeSel]        = { col_fg,       col_bg,      col_accent  },
-	[SchemeTag]	       = { col_fgdim,    col_bg,      col_bg      },
-	[SchemeTagSel]     = { col_fg,       col_accent,  col_accent  },
-	[SchemeTagOcc]     = { col_fg,       col_bgalt,   col_bgalt   },
-	[SchemeTagUrgent]  = { col_bg,       col_urgent,  col_urgent  },
+	[SchemeTagSel]     = { col_fg,       col_bgalt,   col_bgalt   },
 	[SchemeTagUrgent]  = { col_urgent,   col_bgalt,   col_bgalt   },
 };
 
