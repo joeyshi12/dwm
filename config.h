@@ -69,7 +69,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "/home/joey/.config/rofi/config.rasi", "-show-icons" };
-static const char *termcmd[] = { "alacritty", NULL };
+static const char *termcmd[] = { "ghostty", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 static const char *upvolcmd[]   = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "up", NULL };
 static const char *downvolcmd[] = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "down", NULL };
