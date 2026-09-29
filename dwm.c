@@ -2025,11 +2025,20 @@ updatetitle(Client *c)
 void
 updatewindowtype(Client *c)
 {
-	Atom state = getatomprop(c, netatom[NetWMState]);
 	Atom wtype = getatomprop(c, netatom[NetWMWindowType]);
+	Atom da, *states = NULL;
+	int di;
+	unsigned long i, n, dl;
 
-	if (state == netatom[NetWMFullscreen])
-		setfullscreen(c, 1);
+	if (XGetWindowProperty(dpy, c->win, netatom[NetWMState], 0L, 32L, False,
+		XA_ATOM, &da, &di, &n, &dl, (unsigned char **)&states) == Success && states) {
+		for (i = 0; i < n; i++)
+			if (states[i] == netatom[NetWMFullscreen]) {
+				setfullscreen(c, 1);
+				break;
+			}
+		XFree(states);
+	}
 	if (wtype == netatom[NetWMWindowTypeDialog])
 		c->isfloating = 1;
 }
