@@ -68,12 +68,12 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *roficmd[] = { "rofi", "-show", "drun", "-theme", "/home/joey/.config/rofi/config.rasi", "-show-icons" };
+static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[] = { "ghostty", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
-static const char *upvolcmd[]   = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "up", NULL };
-static const char *downvolcmd[] = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "down", NULL };
-static const char *mutevolcmd[] = { "/home/joey/.dotfiles/scripts/volume_notify.sh", "mute", NULL };
+static const char *upvolcmd[]   = { "/bin/sh", "-c", "~/.dotfiles/scripts/volume_notify.sh up", NULL };
+static const char *downvolcmd[] = { "/bin/sh", "-c", "~/.dotfiles/scripts/volume_notify.sh down", NULL };
+static const char *mutevolcmd[] = { "/bin/sh", "-c", "~/.dotfiles/scripts/volume_notify.sh mute", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
